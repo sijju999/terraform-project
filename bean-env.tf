@@ -39,7 +39,7 @@ resource "aws_elastic_beanstalk_environment" "vprofile-bean-prod" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "EC2KeyName"
-    value     = aws_key_pair.vprofilekey.key_name
+    value     = aws_key_pair.terraformkey.key_name
   }
 
   setting {
