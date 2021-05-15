@@ -14,7 +14,7 @@ resource "aws_security_group" "vprofile-bean-elb-sg" {
     protocol    = "tcp"
     to_port     = 80
     cidr_blocks = ["0.0.0.0/0"]
-
+  }
 }
 
 resource "aws_security_group" "vprofile-bastion-sg" {
@@ -31,7 +31,7 @@ resource "aws_security_group" "vprofile-bastion-sg" {
     from_port   = 22
     protocol    = "tcp"
     to_port     = 22
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.MYIP]
   }
 }
 
