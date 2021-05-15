@@ -5,7 +5,7 @@ variable "ZONE1" {
   default = "us-east-2a"
 }
 variable "AMIS" {
-  type = map(any)
+  type = map
   default = {
     us-east-2 = "ami-0d5eff06f840b45e9"
     us-east-2 = "ami-077e31c4939f6a2f3"
